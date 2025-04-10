@@ -28,6 +28,13 @@ The SD loss shows strong performance:
 * Especially in challenging 20-way 1-shot and cross-domain settings
 
 ## Usage Example
+```python
+from loss_fs import SilhouetteDistanceFS
+
+loss_fn = SilhouetteDistanceFS(return_loss=True)
+loss = loss_fn(support_embeddings, support_labels, query_embeddings, query_labels)
+print("Silhouette FS Loss:", loss.item())
+```
 
 ## Citation
 
@@ -40,3 +47,4 @@ The SD loss shows strong performance:
   pages={18},
   year={2024}
 }
+```
